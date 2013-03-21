@@ -19,9 +19,12 @@ Asistent: Adem Šabić
 Studenti: Edin Delanović-IM120027, Elvis Kadić-IM120017 
 
 Seminarski rad iz praktičnog dijela predmeta
+
 =================================================================================================================
  Naziv aplikacije: TRIGLAV
 =================================================================================================================
+
+
 
 
 o Aplikaciji
@@ -47,11 +50,15 @@ aplikacije moći ćete isprobati ostale funkcionalnosti.
 
 
 
+
+
 Korišteni softver
 ********************
 Microsoft Visual Studio 2012 - Student Version
 Microsoft SQL Server 2012 - Student Version
 Adobe Photoshop CS6
+
+
 
 
                                                                                       
