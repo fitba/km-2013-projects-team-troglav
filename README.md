@@ -65,7 +65,7 @@ Pokreuti dokument Triglav.sln (Microsoft Visual Studio Solution)
 Nakon što ste otvorili dokument, u solution exploreru potrebno je otvoriti projekt koji ima naziv Web.
 Nakon toga otvoriti folder Public, te dvostrukim klikom kliknuti na page Home.aspx
 
-6.Korak 
+6.KORAK
 Ako ste uspješno uradili predhodne korake i nalazite se na Home.aspx stranici, ostalo je samo da kompajlirate
 program i isprobate funkcionalnosti aplikacije.
 
