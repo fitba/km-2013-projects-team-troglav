@@ -27,18 +27,15 @@ Seminarski rad iz praktičnog dijela predmeta
 
 
 
-o Aplikaciji
+o Aplikaciji 
 ********************
 
 
-Triglav je web aplikacija sastavljena od dva modula FIT-Wiki & FIT-QA, sa integriranim algoritnom 
-pretraživanja lucene.net i sistemom preporuke.
+Triglav je web aplikacija sastavljena od dva modula FIT-Wiki & FIT-QA, sa integriranim algoritnom pretraživanja lucene.net i sistemom preporuke.
 
-Prvi modul FIT-Wiki je baziran na ideji poznate wikipedia-e, dok je drugi modul FIT-QA baziran na ideji 
-stranice stackoverflow. Oba modula imaju slične funkcionalnosti kao i originalne stranice.
+Prvi modul FIT-Wiki je baziran na ideji poznate wikipedia-e, dok je drugi modul FIT-QA baziran na ideji stranice stackoverflow. Oba modula imaju slične funkcionalnosti kao i originalne stranice.
 
-Dovoljno je da u polje za pretragu unesete pojam i dobit će te listu članaka, pitanja ili autora koji bi mogli 
-pomoći u vezi pojma vaše pretrage. U rezultate je uključena i originalna wikipedia kao dodatni/eksterni izvor 
+Dovoljno je da u polje za pretragu unesete pojam i dobit će te listu članaka, pitanja ili autora koji bi mogli pomoći u vezi pojma vaše pretrage. U rezultate je uključena i originalna wikipedia kao dodatni/eksterni izvor 
 informacija. 
 
 Također, za registrirane korisnike omogućeno je glasanje za post(članak/pitanje)na skali od 1 do 5 i tzv. "lajkanje".
@@ -50,7 +47,7 @@ Pokretanjem aplikacije moći ćete isprobati ostale funkcionalnosti.
 
 
 
-Korišteni softver
+Korišteni softver 
 ********************
 Microsoft Visual Studio 2012 - Student Version
 Microsoft SQL Server 2012 - Student Version 
@@ -59,7 +56,7 @@ Adobe Photoshop CS6
 
 
                                                                                       
-Uputstvo za pokretanje Aplikacije
+Uputstvo za pokretanje Aplikacije 
 ************************************
 
 Postoji više načina pokretanja ove aplikacije. U slijedećem tekstu će biti objašnjen najjednostavniji.
