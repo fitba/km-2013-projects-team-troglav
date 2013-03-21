@@ -7,12 +7,16 @@ Univerzitet "Džemal Bijedić" u Mostaru
 Fakultet informacijskih tehnologija
 
 Akademska godina: 2012./2013.
-II Ciklus studija ::Godina studija: I
-Predmet: Upravljanje znanjem
-Predmetni profesor: prof.dr Vanja Bevanda 
-Asistent: Adem Šabić                                                                                                           
-Studenti: Edin Delanović-IM120027, Elvis Kadić-IM120017 
 
+II Ciklus studija ::Godina studija: I
+
+Predmet: Upravljanje znanjem
+
+Predmetni profesor: prof.dr Vanja Bevanda 
+
+Asistent: Adem Šabić    
+
+Studenti: Edin Delanović-IM120027, Elvis Kadić-IM120017 
 
 Seminarski rad iz praktičnog dijela predmeta
 =================================================================================================================
