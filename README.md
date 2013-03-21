@@ -45,8 +45,9 @@ aplikacije moći ćete isprobati ostale funkcionalnosti.
 
 Korišteni softver
 ********************
-Visual Studio 2012
-
+Microsoft Visual Studio 2012 - Student Version
+Microsoft SQL Server 2012 - Student Version
+Adobe Photoshop CS6
 
 
                                                                                       
