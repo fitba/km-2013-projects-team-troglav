@@ -1,0 +1,11 @@
+RECSYS
+
+Sistem preporuke koji na osnovu historije korisnika i onoga što trenutno traži/pregleda, daje određene preporuke članaka ili odgovora pitanja.
+
+Modul se sastoji od: raznih vrsta preporuka prema popularnosti, sličnosti sadržaja (content-based), sličnosti korisnika (collaborative filtering), itd.
+
+Npr. pogledati desnu stranu sekciju „Related“
+
+http://stackoverflow.com/questions/558794/knowledge-management-toolkits?rq=1
+
+Npr. Postavljam ili pregledam pitanje koje glasi „Šta je Knowledge Management?“, sistem bi trebao da predloži listu članaka na tu temu ili listu osoba koje bi mi mogle pomoć oko toga (npr. edukatora ili studenata koji su davali odgovore na takva pitanja). Ovo zahtjeva primjenu nekog od algoritama za pripremu preporuka i/ili data mining analizu podataka za pripremu preporuka. Za davanje preporuka, pored lokalnog izvora podataka, koristiti min. još jedan eksterni izvor podataka (Freebase, Wikipedia, Wolfram Alpha, itd.)
