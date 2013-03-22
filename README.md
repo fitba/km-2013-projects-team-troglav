@@ -65,15 +65,16 @@ Postoji više načina pokretanja ove aplikacije. U slijedećem tekstu će biti o
 Potrebno uraditi dovnload izvornih fajlova smeštenih u .zip datoteku, sa GitHub Stranice.
 
 2.KORAK 
-Raspakovati .zip datoteku opcijom Extract Here(recimo na Desktop) i trebali bi imati folder 
-sa nazivom Triglav
+Sadržaj .zip datoteke smjestiti u folder pod imenom Triglav.
 
 3.KORAK
 Potrebno je obezbijediti disk koji ima drive letter J:\(to može biti memory stick, eksterni 
 hard disk, ili nova particija). Struktura direktorija na kraju bi trebala izgledati: "J:\Triglav_Web_App\Triglav"
+(U folderu Triglav bi trebao biti sadržaj respakovane .zip datoteke)
 
 4.KORAK
 U Sql Serveru potrebno je uraditi attach baze podataka koja se nalazi u folderu "J:\Triglav_Web_App\Triglav\DB"
+Baza je lokalnog karaktera tako da nema potrebe mijenjati connection string u web.config-u.
 
 5.KORAK
 Pokrenuti dokument Triglav.sln (Microsoft Visual Studio Solution)
@@ -85,6 +86,12 @@ Nakon toga otvoriti folder Public, te dvostrukim klikom kliknuti na page Home.as
 7.KORAK
 Ako ste uspješno uradili predhodne korake i nalazite se na Home.aspx stranici, ostalo je samo da kompajlirate
 program i isprobate funkcionalnosti aplikacije.
+
+8.KORAK(opcionalno)
+Da bi koristili sve funkcionalnosti aplikacije korisnici se moraju registrovati.
+Ako ipak želite preskočiti taj korak, možete se logirati kao postojeći korisnik sa slijedećim podacima:
+Korisnik: blocky, kor01; kor02; kor03; kor04; kor05; kor06; kor07; kor08; kor09; kor10; kor11; kor12; kor13; kor14; 
+Lozinka: test (za sve gore navedene usere)
 
 
 
