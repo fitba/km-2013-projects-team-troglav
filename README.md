@@ -69,17 +69,20 @@ Raspakovati .zip datoteku opcijom Extract Here(recimo na Desktop) i trebali bi i
 sa nazivom Triglav
 
 3.KORAK
-Potrebno je obazbijediti disk koji ima drive letter J:\(to može biti memory stick, eksterni 
+Potrebno je obezbijediti disk koji ima drive letter J:\(to može biti memory stick, eksterni 
 hard disk, ili nova particija). Struktura direktorija na kraju bi trebala izgledati: "J:\Triglav_Web_App\Triglav"
 
 4.KORAK
-Pokrenuti dokument Triglav.sln (Microsoft Visual Studio Solution)
+U Sql Serveru potrebno je uraditi attach baze podataka koja se nalazi u folderu "J:\Triglav_Web_App\Triglav\DB"
 
 5.KORAK
+Pokrenuti dokument Triglav.sln (Microsoft Visual Studio Solution)
+
+6.KORAK
 Nakon što ste otvorili dokument, u solution exploreru(Visual Studio) potrebno je otvoriti projekt koji ima naziv Web.
 Nakon toga otvoriti folder Public, te dvostrukim klikom kliknuti na page Home.aspx
 
-6.KORAK
+7.KORAK
 Ako ste uspješno uradili predhodne korake i nalazite se na Home.aspx stranici, ostalo je samo da kompajlirate
 program i isprobate funkcionalnosti aplikacije.
 
