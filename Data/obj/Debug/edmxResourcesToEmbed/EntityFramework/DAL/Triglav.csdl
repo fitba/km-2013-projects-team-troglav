@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TriglavModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TriglavEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Bedz" EntityType="TriglavModel.Bedz" />
+    <EntitySet Name="Kategorija" EntityType="TriglavModel.Kategorija" />
+    <EntitySet Name="Komentari" EntityType="TriglavModel.Komentari" />
+    <EntitySet Name="Korisnik" EntityType="TriglavModel.Korisnik" />
+    <EntitySet Name="PodKategorija" EntityType="TriglavModel.PodKategorija" />
+    <EntitySet Name="Post" EntityType="TriglavModel.Post" />
+    <EntitySet Name="Posts_Tags" EntityType="TriglavModel.Posts_Tags" />
+    <EntitySet Name="sysdiagrams" EntityType="TriglavModel.sysdiagrams" />
+    <EntitySet Name="Tag" EntityType="TriglavModel.Tag" />
+    <EntitySet Name="User_Likes" EntityType="TriglavModel.User_Likes" />
+    <AssociationSet Name="FK_Korisnik_Bedz" Association="TriglavModel.FK_Korisnik_Bedz">
+      <End Role="Bedz" EntitySet="Bedz" />
+      <End Role="Korisnik" EntitySet="Korisnik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PodKategorija_Kategorija" Association="TriglavModel.FK_PodKategorija_Kategorija">
+      <End Role="Kategorija" EntitySet="Kategorija" />
+      <End Role="PodKategorija" EntitySet="PodKategorija" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Komentari_Korisnik" Association="TriglavModel.FK_Komentari_Korisnik">
+      <End Role="Korisnik" EntitySet="Korisnik" />
+      <End Role="Komentari" EntitySet="Komentari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Komentari_Post" Association="TriglavModel.FK_Komentari_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Komentari" EntitySet="Komentari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Post_Korisnik" Association="TriglavModel.FK_Post_Korisnik">
+      <End Role="Korisnik" EntitySet="Korisnik" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Likes_Korisnik" Association="TriglavModel.FK_User_Likes_Korisnik">
+      <End Role="Korisnik" EntitySet="Korisnik" />
+      <End Role="User_Likes" EntitySet="User_Likes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Post_PodKategorija" Association="TriglavModel.FK_Post_PodKategorija">
+      <End Role="PodKategorija" EntitySet="PodKategorija" />
+      <End Role="Post" EntitySet="Post" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Posts_Tags_Post1" Association="TriglavModel.FK_Posts_Tags_Post1">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Posts_Tags" EntitySet="Posts_Tags" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Likes_Post" Association="TriglavModel.FK_User_Likes_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="User_Likes" EntitySet="User_Likes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Posts_Tags_Tag1" Association="TriglavModel.FK_Posts_Tags_Tag1">
+      <End Role="Tag" EntitySet="Tag" />
+      <End Role="Posts_Tags" EntitySet="Posts_Tags" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bedz">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Naziv" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Opis" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DatumKreiranja" Precision="3" />
+    <Property Type="String" Name="SlikaURL" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Korisnik" Relationship="TriglavModel.FK_Korisnik_Bedz" FromRole="Bedz" ToRole="Korisnik" />
+  </EntityType>
+  <EntityType Name="Kategorija">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Naslov" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Opis" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DatumKreiranja" Precision="3" />
+    <NavigationProperty Name="PodKategorija" Relationship="TriglavModel.FK_PodKategorija_Kategorija" FromRole="Kategorija" ToRole="PodKategorija" />
+  </EntityType>
+  <EntityType Name="Komentari">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Sadrzaj" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DatumKreiranja" Precision="3" />
+    <Property Type="Int32" Name="Likes" />
+    <Property Type="Int32" Name="Unlikes" />
+    <Property Type="Int32" Name="PostID" />
+    <Property Type="Int32" Name="KorisnikID" />
+    <Property Type="Int32" Name="isRazgovor" />
+    <NavigationProperty Name="Korisnik" Relationship="TriglavModel.FK_Komentari_Korisnik" FromRole="Komentari" ToRole="Korisnik" />
+    <NavigationProperty Name="Post" Relationship="TriglavModel.FK_Komentari_Post" FromRole="Komentari" ToRole="Post" />
+  </EntityType>
+  <EntityType Name="Korisnik">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nadimak" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Lozinka" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BrojGodina" />
+    <Property Type="String" Name="OMeni" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Lokacija" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DatumKreiranja" Precision="3" />
+    <Property Type="DateTime" Name="DatumZadnjegPristupa" Precision="3" />
+    <Property Type="String" Name="SlikaURL" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Reputacija" />
+    <Property Type="Int32" Name="Pregleda" />
+    <Property Type="Int32" Name="Likes" />
+    <Property Type="Int32" Name="Unlikes" />
+    <Property Type="String" Name="temp" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BedzID" />
+    <Property Type="Int32" Name="BrojZlatnih" />
+    <Property Type="Int32" Name="BrojSrebrenih" />
+    <Property Type="Int32" Name="BrojBronzanih" />
+    <Property Type="String" Name="BedzNaziv" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BedzSlika" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BedzOpis" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Bedz" Relationship="TriglavModel.FK_Korisnik_Bedz" FromRole="Korisnik" ToRole="Bedz" />
+    <NavigationProperty Name="Komentari" Relationship="TriglavModel.FK_Komentari_Korisnik" FromRole="Korisnik" ToRole="Komentari" />
+    <NavigationProperty Name="Post" Relationship="TriglavModel.FK_Post_Korisnik" FromRole="Korisnik" ToRole="Post" />
+    <NavigationProperty Name="User_Likes" Relationship="TriglavModel.FK_User_Likes_Korisnik" FromRole="Korisnik" ToRole="User_Likes" />
+  </EntityType>
+  <EntityType Name="PodKategorija">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Naslov" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Opis" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DatumKreiranja" Precision="3" />
+    <Property Type="Int32" Name="KategorijaID" />
+    <NavigationProperty Name="Kategorija" Relationship="TriglavModel.FK_PodKategorija_Kategorija" FromRole="PodKategorija" ToRole="Kategorija" />
+    <NavigationProperty Name="Post" Relationship="TriglavModel.FK_Post_PodKategorija" FromRole="PodKategorija" ToRole="Post" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Naslov" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Sadrzaj" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Tagovi" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DatumKreiranja" Precision="3" />
+    <Property Type="DateTime" Name="DatumZadnjeIzmjene" Precision="3" />
+    <Property Type="DateTime" Name="DatumZadnjeAktivnosti" Precision="3" />
+    <Property Type="DateTime" Name="DatumZatvaranjaPosta" Precision="3" />
+    <Property Type="Int32" Name="PrihvaceniOdgovori" />
+    <Property Type="Int32" Name="BrojOdgovora" />
+    <Property Type="Int32" Name="BrojKomentara" />
+    <Property Type="Int32" Name="BrojOmiljenih" />
+    <Property Type="Int32" Name="BrojPregleda" />
+    <Property Type="Int32" Name="BrojPoena" />
+    <Property Type="Int32" Name="VlasnikID" />
+    <Property Type="String" Name="VlasnikNadimak" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PromijenioID" />
+    <Property Type="Int32" Name="RoditeljskiPostID" />
+    <Property Type="Int32" Name="PodKategorija" />
+    <Property Type="Int32" Name="PostVrsta" />
+    <Property Type="String" Name="SlikaURL" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="temp" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Likes" />
+    <Property Type="Int32" Name="Unlikes" />
+    <Property Type="String" Name="Sazetak" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="BrojRangiranja" />
+    <Property Type="Int32" Name="PrihvacenaIzmjena" />
+    <Property Type="String" Name="Podnaslov" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Broj_Razgovora" />
+    <NavigationProperty Name="Komentari" Relationship="TriglavModel.FK_Komentari_Post" FromRole="Post" ToRole="Komentari" />
+    <NavigationProperty Name="Korisnik" Relationship="TriglavModel.FK_Post_Korisnik" FromRole="Post" ToRole="Korisnik" />
+    <NavigationProperty Name="PodKategorija1" Relationship="TriglavModel.FK_Post_PodKategorija" FromRole="Post" ToRole="PodKategorija" />
+    <NavigationProperty Name="Posts_Tags" Relationship="TriglavModel.FK_Posts_Tags_Post1" FromRole="Post" ToRole="Posts_Tags" />
+    <NavigationProperty Name="User_Likes" Relationship="TriglavModel.FK_User_Likes_Post" FromRole="Post" ToRole="User_Likes" />
+  </EntityType>
+  <EntityType Name="Posts_Tags">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="PostID" />
+    <Property Type="Int32" Name="TagID" />
+    <NavigationProperty Name="Post" Relationship="TriglavModel.FK_Posts_Tags_Post1" FromRole="Posts_Tags" ToRole="Post" />
+    <NavigationProperty Name="Tag" Relationship="TriglavModel.FK_Posts_Tags_Tag1" FromRole="Posts_Tags" ToRole="Tag" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="principal_id" Nullable="false" />
+    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="version" />
+    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Naziv" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Opis" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DatumKreiranja" Precision="3" />
+    <NavigationProperty Name="Posts_Tags" Relationship="TriglavModel.FK_Posts_Tags_Tag1" FromRole="Tag" ToRole="Posts_Tags" />
+  </EntityType>
+  <EntityType Name="User_Likes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="UserId" />
+    <Property Type="Int32" Name="PostId" />
+    <Property Type="DateTime" Name="DatumLajkanja" Precision="3" />
+    <Property Type="Int32" Name="isLiked" />
+    <Property Type="Int32" Name="Rate" />
+    <Property Type="DateTime" Name="DaumRated" Precision="3" />
+    <NavigationProperty Name="Korisnik" Relationship="TriglavModel.FK_User_Likes_Korisnik" FromRole="User_Likes" ToRole="Korisnik" />
+    <NavigationProperty Name="Post" Relationship="TriglavModel.FK_User_Likes_Post" FromRole="User_Likes" ToRole="Post" />
+  </EntityType>
+  <Association Name="FK_Korisnik_Bedz">
+    <End Type="TriglavModel.Bedz" Role="Bedz" Multiplicity="0..1" />
+    <End Type="TriglavModel.Korisnik" Role="Korisnik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bedz">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Korisnik">
+        <PropertyRef Name="BedzID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PodKategorija_Kategorija">
+    <End Type="TriglavModel.Kategorija" Role="Kategorija" Multiplicity="0..1" />
+    <End Type="TriglavModel.PodKategorija" Role="PodKategorija" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategorija">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="PodKategorija">
+        <PropertyRef Name="KategorijaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Komentari_Korisnik">
+    <End Type="TriglavModel.Korisnik" Role="Korisnik" Multiplicity="0..1" />
+    <End Type="TriglavModel.Komentari" Role="Komentari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnik">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Komentari">
+        <PropertyRef Name="KorisnikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Komentari_Post">
+    <End Type="TriglavModel.Post" Role="Post" Multiplicity="0..1" />
+    <End Type="TriglavModel.Komentari" Role="Komentari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Komentari">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Post_Korisnik">
+    <End Type="TriglavModel.Korisnik" Role="Korisnik" Multiplicity="0..1" />
+    <End Type="TriglavModel.Post" Role="Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnik">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="VlasnikID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Likes_Korisnik">
+    <End Type="TriglavModel.Korisnik" Role="Korisnik" Multiplicity="0..1" />
+    <End Type="TriglavModel.User_Likes" Role="User_Likes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Korisnik">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User_Likes">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Post_PodKategorija">
+    <End Type="TriglavModel.PodKategorija" Role="PodKategorija" Multiplicity="0..1" />
+    <End Type="TriglavModel.Post" Role="Post" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PodKategorija">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Post">
+        <PropertyRef Name="PodKategorija" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Posts_Tags_Post1">
+    <End Type="TriglavModel.Post" Role="Post" Multiplicity="0..1" />
+    <End Type="TriglavModel.Posts_Tags" Role="Posts_Tags" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Posts_Tags">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Likes_Post">
+    <End Type="TriglavModel.Post" Role="Post" Multiplicity="0..1" />
+    <End Type="TriglavModel.User_Likes" Role="User_Likes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="User_Likes">
+        <PropertyRef Name="PostId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Posts_Tags_Tag1">
+    <End Type="TriglavModel.Tag" Role="Tag" Multiplicity="0..1" />
+    <End Type="TriglavModel.Posts_Tags" Role="Posts_Tags" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tag">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Posts_Tags">
+        <PropertyRef Name="TagID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TriglavModelStoreContainer" CdmEntityContainer="TriglavEntities">
+    <EntitySetMapping Name="Bedz">
+      <EntityTypeMapping TypeName="TriglavModel.Bedz">
+        <MappingFragment StoreEntitySet="Bedz">
+          <ScalarProperty Name="SlikaURL" ColumnName="SlikaURL" />
+          <ScalarProperty Name="DatumKreiranja" ColumnName="DatumKreiranja" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategorija">
+      <EntityTypeMapping TypeName="TriglavModel.Kategorija">
+        <MappingFragment StoreEntitySet="Kategorija">
+          <ScalarProperty Name="DatumKreiranja" ColumnName="DatumKreiranja" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Komentari">
+      <EntityTypeMapping TypeName="TriglavModel.Komentari">
+        <MappingFragment StoreEntitySet="Komentari">
+          <ScalarProperty Name="isRazgovor" ColumnName="isRazgovor" />
+          <ScalarProperty Name="KorisnikID" ColumnName="KorisnikID" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="Unlikes" ColumnName="Unlikes" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="DatumKreiranja" ColumnName="DatumKreiranja" />
+          <ScalarProperty Name="Sadrzaj" ColumnName="Sadrzaj" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korisnik">
+      <EntityTypeMapping TypeName="TriglavModel.Korisnik">
+        <MappingFragment StoreEntitySet="Korisnik">
+          <ScalarProperty Name="BedzOpis" ColumnName="BedzOpis" />
+          <ScalarProperty Name="BedzSlika" ColumnName="BedzSlika" />
+          <ScalarProperty Name="BedzNaziv" ColumnName="BedzNaziv" />
+          <ScalarProperty Name="BrojBronzanih" ColumnName="BrojBronzanih" />
+          <ScalarProperty Name="BrojSrebrenih" ColumnName="BrojSrebrenih" />
+          <ScalarProperty Name="BrojZlatnih" ColumnName="BrojZlatnih" />
+          <ScalarProperty Name="BedzID" ColumnName="BedzID" />
+          <ScalarProperty Name="temp" ColumnName="temp" />
+          <ScalarProperty Name="Unlikes" ColumnName="Unlikes" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Pregleda" ColumnName="Pregleda" />
+          <ScalarProperty Name="Reputacija" ColumnName="Reputacija" />
+          <ScalarProperty Name="SlikaURL" ColumnName="SlikaURL" />
+          <ScalarProperty Name="DatumZadnjegPristupa" ColumnName="DatumZadnjegPristupa" />
+          <ScalarProperty Name="DatumKreiranja" ColumnName="DatumKreiranja" />
+          <ScalarProperty Name="Lokacija" ColumnName="Lokacija" />
+          <ScalarProperty Name="OMeni" ColumnName="OMeni" />
+          <ScalarProperty Name="BrojGodina" ColumnName="BrojGodina" />
+          <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
+          <ScalarProperty Name="Nadimak" ColumnName="Nadimak" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PodKategorija">
+      <EntityTypeMapping TypeName="TriglavModel.PodKategorija">
+        <MappingFragment StoreEntitySet="PodKategorija">
+          <ScalarProperty Name="KategorijaID" ColumnName="KategorijaID" />
+          <ScalarProperty Name="DatumKreiranja" ColumnName="DatumKreiranja" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post">
+      <EntityTypeMapping TypeName="TriglavModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="Broj_Razgovora" ColumnName="Broj.Razgovora" />
+          <ScalarProperty Name="Podnaslov" ColumnName="Podnaslov" />
+          <ScalarProperty Name="PrihvacenaIzmjena" ColumnName="PrihvacenaIzmjena" />
+          <ScalarProperty Name="BrojRangiranja" ColumnName="BrojRangiranja" />
+          <ScalarProperty Name="Sazetak" ColumnName="Sazetak" />
+          <ScalarProperty Name="Unlikes" ColumnName="Unlikes" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="temp" ColumnName="temp" />
+          <ScalarProperty Name="SlikaURL" ColumnName="SlikaURL" />
+          <ScalarProperty Name="PostVrsta" ColumnName="PostVrsta" />
+          <ScalarProperty Name="PodKategorija" ColumnName="PodKategorija" />
+          <ScalarProperty Name="RoditeljskiPostID" ColumnName="RoditeljskiPostID" />
+          <ScalarProperty Name="PromijenioID" ColumnName="PromijenioID" />
+          <ScalarProperty Name="VlasnikNadimak" ColumnName="VlasnikNadimak" />
+          <ScalarProperty Name="VlasnikID" ColumnName="VlasnikID" />
+          <ScalarProperty Name="BrojPoena" ColumnName="BrojPoena" />
+          <ScalarProperty Name="BrojPregleda" ColumnName="BrojPregleda" />
+          <ScalarProperty Name="BrojOmiljenih" ColumnName="BrojOmiljenih" />
+          <ScalarProperty Name="BrojKomentara" ColumnName="BrojKomentara" />
+          <ScalarProperty Name="BrojOdgovora" ColumnName="BrojOdgovora" />
+          <ScalarProperty Name="PrihvaceniOdgovori" ColumnName="PrihvaceniOdgovori" />
+          <ScalarProperty Name="DatumZatvaranjaPosta" ColumnName="DatumZatvaranjaPosta" />
+          <ScalarProperty Name="DatumZadnjeAktivnosti" ColumnName="DatumZadnjeAktivnosti" />
+          <ScalarProperty Name="DatumZadnjeIzmjene" ColumnName="DatumZadnjeIzmjene" />
+          <ScalarProperty Name="DatumKreiranja" ColumnName="DatumKreiranja" />
+          <ScalarProperty Name="Tagovi" ColumnName="Tagovi" />
+          <ScalarProperty Name="Sadrzaj" ColumnName="Sadrzaj" />
+          <ScalarProperty Name="Naslov" ColumnName="Naslov" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posts_Tags">
+      <EntityTypeMapping TypeName="TriglavModel.Posts_Tags">
+        <MappingFragment StoreEntitySet="Posts_Tags">
+          <ScalarProperty Name="TagID" ColumnName="TagID" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TriglavModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tag">
+      <EntityTypeMapping TypeName="TriglavModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="DatumKreiranja" ColumnName="DatumKreiranja" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Likes">
+      <EntityTypeMapping TypeName="TriglavModel.User_Likes">
+        <MappingFragment StoreEntitySet="User_Likes">
+          <ScalarProperty Name="DaumRated" ColumnName="DaumRated" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="isLiked" ColumnName="isLiked" />
+          <ScalarProperty Name="DatumLajkanja" ColumnName="DatumLajkanja" />
+          <ScalarProperty Name="PostId" ColumnName="PostId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

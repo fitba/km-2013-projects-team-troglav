@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9603105c45b848368d6813cdb6c9865b" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="TriglavModel.Bedz" Width="1.5" PointX="9.6015646968044166" PointY="21.604350323604582" />
+        <EntityTypeShape EntityType="TriglavModel.Kategorija" Width="1.5" PointX="9.8960381606109618" PointY="25.169956293501873" />
+        <EntityTypeShape EntityType="TriglavModel.Komentari" Width="1.5" PointX="7.2976626713283652" PointY="8.2325355150888377" />
+        <EntityTypeShape EntityType="TriglavModel.Korisnik" Width="1.5" PointX="10.751757339924462" PointY="17.300936081121179" />
+        <EntityTypeShape EntityType="TriglavModel.PodKategorija" Width="1.5" PointX="6.1408285936996467" PointY="21.467200095517189" />
+        <EntityTypeShape EntityType="TriglavModel.Post" Width="1.5" PointX="0.33295525067157822" PointY="5.8719165203496422" />
+        <EntityTypeShape EntityType="TriglavModel.Posts_Tags" Width="1.5" PointX="0.57406128783433752" PointY="12.589412069222616" />
+        <EntityTypeShape EntityType="TriglavModel.sysdiagrams" Width="1.5" PointX="9.6486756865161833" PointY="10.817101707131183" />
+        <EntityTypeShape EntityType="TriglavModel.Tag" Width="1.5" PointX="4.7189919300000138" PointY="30.909456058828837" />
+        <EntityTypeShape EntityType="TriglavModel.User_Likes" Width="1.5" PointX="5.8599079185444438" PointY="8.6927270035691215" />
+        <AssociationConnector Association="TriglavModel.FK_Korisnik_Bedz" />
+        <AssociationConnector Association="TriglavModel.FK_PodKategorija_Kategorija" />
+        <AssociationConnector Association="TriglavModel.FK_Komentari_Korisnik" />
+        <AssociationConnector Association="TriglavModel.FK_Komentari_Post" />
+        <AssociationConnector Association="TriglavModel.FK_Post_Korisnik" />
+        <AssociationConnector Association="TriglavModel.FK_User_Likes_Korisnik" />
+        <AssociationConnector Association="TriglavModel.FK_Post_PodKategorija" />
+        <AssociationConnector Association="TriglavModel.FK_Posts_Tags_Post1" />
+        <AssociationConnector Association="TriglavModel.FK_User_Likes_Post" />
+        <AssociationConnector Association="TriglavModel.FK_Posts_Tags_Tag1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
